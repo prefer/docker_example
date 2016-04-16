@@ -1,0 +1,5 @@
+- name: Install packages
+  sudo: yes
+  apt: pkg={{ item }} state=latest update_cache=yes
+  with_items:
+      - docker.io
